@@ -8,12 +8,13 @@ body {
 
 /* Navigation bar */
 nav {
-    background:#b20202;
+    background: #b20202;
     color: #fff;
     display: flex;
     align-items: center;
     padding: 0 20px;
-    height: 48px;
+    height: 56px;
+    gap: 18px;
 }
 
 nav a {
@@ -22,7 +23,20 @@ nav a {
     margin-right: 24px;
     font-weight: bold;
     font-size: 16px;
-    line-height: 48px;
+    line-height: 56px;
+}
+
+#searchInput {
+    flex: none;
+    width: 180px;
+    font-size: 1rem;
+    padding: 6px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    display: block;
 }
 
 nav a:hover {
@@ -119,4 +133,10 @@ footer {
     border-radius: 8px;
     box-sizing: border-box;
     display: block;
+}
+
+#postsList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
 }

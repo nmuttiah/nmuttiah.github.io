@@ -7,8 +7,9 @@
   </head>
   <body>
     <nav>
-      <a href="/">Home</a>
+      <a href="/">Website Name</a>
       <a href="/about/">About</a>
+      <input type="text" id="searchInput" placeholder="Search posts..." onkeyup="filterPosts()">
     </nav>
     <section id="main">
       {{ content }}
@@ -17,4 +18,18 @@
       &copy; to me
     </footer>
   </body>
+
+  <script>
+function filterPosts() {
+  var input = document.getElementById('searchInput');
+  var filter = input.value.toLowerCase();
+  var ul = document.getElementById('postsList');
+  var li = ul.getElementsByTagName('li');
+  for (var i = 0; i < li.length; i++) {
+    var a = li[i].getElementsByTagName('a')[0];
+    var txtValue = a.textContent || a.innerText;
+    li[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+  }
+}
+</script>
 </html>
